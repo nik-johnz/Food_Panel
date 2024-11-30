@@ -26,8 +26,8 @@ const Header = () => {
             to="/" 
             className="flex items-center space-x-2 group"
           >
-            <Menu className="h-6 w-6 text-purple-600 group-hover:rotate-180 transition-transform duration-300" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <Menu className="hidden md:block h-6 w-6 text-purple-600 transition-transform duration-300" />
+            <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Food Menu
             </span>
           </Link>
@@ -39,7 +39,7 @@ const Header = () => {
               className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors"
             >
               <Home className="h-4 w-4" />
-              <span>Menu</span>
+              <span className='hidden md:block'>Menu</span>
             </Link>
 
             {isAdmin && (
@@ -48,7 +48,7 @@ const Header = () => {
                 className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors"
               >
                 <Users className="h-4 w-4" />
-                <span>Manage Users</span>
+                <span className='hidden md:block'>Manage Users</span>
               </Link>
             )}
 
@@ -60,7 +60,7 @@ const Header = () => {
                          shadow-md hover:shadow-lg active:scale-95"
               >
                 <LogOut className="h-4 w-4" />
-                <span>Logout</span>
+                <span className='hidden md:block'>Logout</span>
               </button>
             ) : (
               <Link
